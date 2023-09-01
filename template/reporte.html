@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reportes de Base de Datos</title>
+</head>
+
+<body>
+
+<h1>Reporte de Estudiantes</h1>
+
+<table>
+<tr>
+    <th>ID</th> 
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Edad</th>
+</tr>
+
+{% for row in data1 %}
+<tr>
+    <td>{{estudiante.id}}</td>
+    <td>{{estudiante.nombre}}</td>
+    <td>{{estudiante.apellido}}</td>
+    <td>{{estudiante.edad}}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+
+<h1>Reporte de Cursos</h1>
+
+<table>
+<tr>
+    <th>ID</th>
+    <th>Nombre del Curso</th>
+    <th>ID del Estudiante</th> 
+</tr>
+
+{% for row in data2 %}
+<tr>
+    <td>{{curso.id}}</td>
+    <td>{{curso.nombre_curso}}</td>
+    <td>{{curso.id_estudiante}}</td>
+</tr>  
+{% endfor %}
+
+</table>
+
+</body>
+</html>
